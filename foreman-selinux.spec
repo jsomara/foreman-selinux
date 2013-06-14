@@ -36,7 +36,7 @@
 #global dashalphatag -%{alphatag}
 
 Name:           %{modulename}-selinux
-Version:        1.2.10001
+Version:        1.2.10002
 Release:        1%{?dotalphatag}%{?dist}
 Summary:        SELinux policy module for Foreman
 
@@ -135,6 +135,9 @@ fi
 %attr(0755,root,root) %{_sbindir}/%{name}-relabel
 
 %changelog
+* Fri Jun 14 2013 Jordan OMara <jomara@redhat.com> 1.2.10002-1
+- Fix missing SCL paths in -enable and SCL'd Puppet (dcleal@redhat.com)
+
 * Wed Jun 12 2013 Jordan OMara <jomara@redhat.com> 1.2.10001-1
 - SCLizing all the paths (jomara@redhat.com)
 
