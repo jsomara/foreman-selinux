@@ -38,3 +38,8 @@
 
 /opt/rh/ruby193/root/usr/share/gems/gems/passenger-.*/agents/.* -- gen_context(system_u:object_r:passenger_exec_t,s0)
 /opt/rh/ruby193/root/usr/share/gems/gems/passenger-.*/helper-scripts/prespawn -- gen_context(system_u:object_r:passenger_exec_t,s0)
+
+# Puppet SCL file contexts
+
+/opt/rh/ruby193/root/etc/puppet(/.*)?                       gen_context(system_u:object_r:puppet_etc_t,s0)
+/opt/rh/ruby193/root/var/lib/puppet(/.*)?                   gen_context(system_u:object_r:puppet_var_lib_t,s0)
